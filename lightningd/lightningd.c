@@ -110,7 +110,7 @@ static struct lightningd *new_lightningd(const tal_t *ctx)
 	 *
 	 * In this case, freeing `ctx` will free `ld`:
 	 */
-	struct lightningd *ld = tal(ctx, struct lightningd);
+	struct lightningd *ld = tal(ctx, struct lightningd); AQUI
 
 	/*~ Style note: `ctx` is declared `const`, yet we can `tallocate` from
 	 * it.  Adding/removing children is not considered to change an
